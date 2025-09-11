@@ -45,7 +45,7 @@ export default function QuotePage() {
                     <Mail className="h-5 w-5 text-muted-foreground mt-1" />
                     <div>
                         <h4 className="font-semibold">Email</h4>
-                        <p className="text-muted-foreground">contact@softforge.com</p>
+                        <p className="text-muted-foreground">contact@zechsoft.com</p>
                     </div>
                 </div>
                  <div className="flex items-start gap-4">

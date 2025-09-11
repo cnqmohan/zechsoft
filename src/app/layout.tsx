@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'SoftForge Solutions',
+  title: 'Zechsoft',
   description:
     'Custom software development company specializing in web, mobile, and enterprise solutions.',
 };

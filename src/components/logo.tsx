@@ -23,7 +23,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         fontWeight="800"
         fill="url(#logo-gradient)"
       >
-        SoftForge
+        Zechsoft
       </text>
     </svg>
   );

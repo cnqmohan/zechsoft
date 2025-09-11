@@ -98,7 +98,7 @@ export const testimonials = [
   {
     name: 'Sarah L.',
     company: 'CEO, Innovate Inc.',
-    quote: 'SoftForge Solutions transformed our operations with their custom enterprise software. Their team was professional, responsive, and truly understood our needs. We couldn\'t be happier with the result.',
+    quote: 'Zechsoft transformed our operations with their custom enterprise software. Their team was professional, responsive, and truly understood our needs. We couldn\'t be happier with the result.',
     imageId: 'testimonial-1',
   },
   {
@@ -110,7 +110,7 @@ export const testimonials = [
   {
     name: 'Emily C.',
     company: 'Marketing Director, HealthCo',
-    quote: 'Working with SoftForge on our UI/UX redesign was a fantastic experience. They took the time to understand our users and delivered a design that is both beautiful and incredibly intuitive. Our conversion rates have skyrocketed.',
+    quote: 'Working with Zechsoft on our UI/UX redesign was a fantastic experience. They took the time to understand our users and delivered a design that is both beautiful and incredibly intuitive. Our conversion rates have skyrocketed.',
     imageId: 'testimonial-3',
   },
 ];
@@ -138,7 +138,7 @@ export const blogPosts = [
 <h3>The Future is Collaborative</h3>
 <p>The role of AI in software development is not to replace human developers but to augment their abilities. The future is a collaborative one, where developers and AI work together, each leveraging their unique strengths. Developers bring creativity, critical thinking, and a deep understanding of user needs, while AI provides speed, data-processing power, and the ability to handle complex, repetitive tasks.</p>
 
-<p>As AI technology continues to mature, its integration into software development will only deepen. Embracing these tools is no longer optional for companies that want to stay competitive. At SoftForge Solutions, we are committed to leveraging the power of AI to build better, smarter, and more efficient software for our clients.</p>
+<p>As AI technology continues to mature, its integration into software development will only deepen. Embracing these tools is no longer optional for companies that want to stay competitive. At Zechsoft, we are committed to leveraging the power of AI to build better, smarter, and more efficient software for our clients.</p>
         `,
     },
     {
@@ -200,7 +200,7 @@ export const blogPosts = [
     <li><strong>Budget:</strong> Do you prefer a capital expenditure (CapEx) model or an operational expenditure (OpEx) model?</li>
     <li><strong>IT Resources:</strong> Do you have the in-house expertise to manage and maintain your own servers?</li>
 </ul>
-<p>At SoftForge Solutions, we help our clients navigate these complex decisions, designing and implementing infrastructure strategies that align with their business objectives and set them up for future growth.</p>
+<p>At Zechsoft, we help our clients navigate these complex decisions, designing and implementing infrastructure strategies that align with their business objectives and set them up for future growth.</p>
         `,
     },
     {
@@ -230,7 +230,7 @@ export const blogPosts = [
 <h3>The Cost of Inaction</h3>
 <p>The cost of a data breach goes far beyond financial penalties. It includes reputational damage, loss of customer trust, and potential legal liabilities. Investing in proactive cybersecurity is not just a cost center; it\'s an investment in the long-term health and resilience of your business.</p>
 
-<p>At SoftForge Solutions, we embed security into every stage of the software development lifecycle. By adopting a proactive, defense-in-depth strategy, we help our clients build applications that are not only functional and efficient but also resilient against the ever-evolving landscape of cyber threats.</p>
+<p>At Zechsoft, we embed security into every stage of the software development lifecycle. By adopting a proactive, defense-in-depth strategy, we help our clients build applications that are not only functional and efficient but also resilient against the ever-evolving landscape of cyber threats.</p>
         `,
     },
 ];

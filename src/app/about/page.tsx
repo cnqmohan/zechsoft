@@ -16,7 +16,7 @@ export default function AboutPage() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  About SoftForge Solutions
+                  About Zechsoft
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   We are a passionate team of developers, designers, and strategists dedicated to building exceptional software that solves real-world problems.
