@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { services } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -24,7 +24,7 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12">
             {services.map((service, index) => {
-              const serviceImage = PlaceholderImages.find((p) => p.id === service.imageId);
+              const serviceImage = PlaceHolderImages.find((p) => p.id === service.imageId);
               const isReversed = index % 2 !== 0;
               return (
                 <div key={service.title} className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">

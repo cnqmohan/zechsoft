@@ -11,7 +11,7 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function TestimonialsCarousel() {
   return (
@@ -24,7 +24,7 @@ export function TestimonialsCarousel() {
     >
       <CarouselContent>
         {testimonials.map((testimonial, index) => {
-          const image = PlaceholderImages.find((p) => p.id === testimonial.imageId);
+          const image = PlaceHolderImages.find((p) => p.id === testimonial.imageId);
           return (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1 h-full">

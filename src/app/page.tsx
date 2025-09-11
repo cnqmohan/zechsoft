@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit } from 'lucide-react';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 import { services, portfolioItems } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const serviceIcons: { [key: string]: React.ElementType } = {
   'Custom Web Development': Code,
@@ -16,7 +16,7 @@ const serviceIcons: { [key: string]: React.ElementType } = {
 };
 
 export default function Home() {
-  const heroImage = PlaceholderImages.find(p => p.id === 'hero');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const featuredServices = services.slice(0, 3);
   const featuredPortfolio = portfolioItems.slice(0, 3);
 
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 mt-12">
             {featuredPortfolio.map((item) => {
-               const portfolioImage = PlaceholderImages.find(p => p.id === item.imageId);
+               const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                return (
                 <Card key={item.title} className="overflow-hidden group">
                    {portfolioImage && (

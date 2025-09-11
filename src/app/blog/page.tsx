@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 
 export default function BlogPage() {
@@ -26,7 +26,7 @@ export default function BlogPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => {
-              const postImage = PlaceholderImages.find((p) => p.id === post.imageId);
+              const postImage = PlaceHolderImages.find((p) => p.id === post.imageId);
               return (
                 <Card key={post.slug} className="flex flex-col overflow-hidden">
                   {postImage && (

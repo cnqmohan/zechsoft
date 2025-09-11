@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { portfolioItems } from '@/lib/data';
 import Image from 'next/image';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
@@ -27,7 +27,7 @@ export default function PortfolioPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12">
             {portfolioItems.map((item) => {
-              const itemImage = PlaceholderImages.find((p) => p.id === item.imageId);
+              const itemImage = PlaceHolderImages.find((p) => p.id === item.imageId);
               return (
                 <Card key={item.title} className="w-full overflow-hidden shadow-lg">
                   <div className="grid md:grid-cols-2">

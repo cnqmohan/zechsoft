@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { teamMembers } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Target, Eye, Gem } from 'lucide-react';
 
 export default function AboutPage() {
-  const aboutImage = PlaceholderImages.find((p) => p.id === 'about-us');
+  const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-us');
 
   return (
     <>
@@ -77,7 +77,7 @@ export default function AboutPage() {
           </div>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-4 mt-12">
             {teamMembers.map((member) => {
-              const teamImage = PlaceholderImages.find((p) => p.id === member.imageId);
+              const teamImage = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
                 <Card key={member.name} className="text-center border-0 shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center gap-4 pt-6">

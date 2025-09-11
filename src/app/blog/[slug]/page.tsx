@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { blogPosts } from '@/lib/data';
-import { PlaceholderImages } from '@/lib/placeholder-images';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArticleSummary } from '@/components/blog-summary';
 
 export async function generateStaticParams() {
@@ -17,7 +17,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const postImage = PlaceholderImages.find((p) => p.id === post.imageId);
+  const postImage = PlaceHolderImages.find((p) => p.id === post.imageId);
 
   return (
     <article>
