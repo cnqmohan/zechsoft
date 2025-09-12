@@ -85,11 +85,11 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-4 mt-12">
+            <div className="mx-auto flex justify-center max-w-5xl items-start gap-8 mt-12">
               {teamMembers.map((member) => {
                 const teamImage = PlaceHolderImages.find((p) => p.id === member.imageId);
                 return (
-                  <Card key={member.name} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Card key={member.name} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm">
                     <CardContent className="flex flex-col items-center gap-4 pt-6">
                       {teamImage && (
                         <Avatar className="h-32 w-32">
