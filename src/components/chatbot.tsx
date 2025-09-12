@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, Send, User, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 type Message = {
@@ -18,6 +18,23 @@ export function Chatbot({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
     { sender: 'bot', text: "Hello! How can I help you today?" }
   ]);
   const [input, setInput] = useState('');
+  const chatRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (chatRef.current && !chatRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
 
   const handleSend = () => {
     if (input.trim() === '') return;
@@ -32,7 +49,7 @@ export function Chatbot({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
   };
 
   return (
-    <div className={cn("fixed bottom-20 left-4 z-50 transition-transform duration-300 ease-in-out", isOpen ? 'translate-x-0' : '-translate-x-[calc(100%+2rem)]')}>
+    <div ref={chatRef} className={cn("fixed bottom-20 left-4 z-50 transition-transform duration-300 ease-in-out", isOpen ? 'translate-x-0' : '-translate-x-[calc(100%+2rem)]')}>
         <Card className="w-80 h-[500px] shadow-2xl flex flex-col">
             <CardHeader className="flex flex-row items-center justify-between bg-primary text-primary-foreground p-4">
                 <div className="flex items-center gap-3">
@@ -60,7 +77,7 @@ export function Chatbot({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
             </CardContent>
             <CardFooter className="p-4 border-t">
                  <form
-                    action={handleSend}
+                    onSubmit={(e) => { e.preventDefault(); handleSend(); }}
                     className="flex w-full items-center space-x-2"
                     >
                     <Input
