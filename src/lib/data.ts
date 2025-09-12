@@ -273,6 +273,30 @@ export const portfolioItems = [
     metrics: ['25% reduction in admin tasks', 'Full HIPAA compliance', 'Improved patient satisfaction score by 15 points'],
     challenges: 'Ensuring strict adherence to HIPAA regulations while maintaining a user-friendly interface for patients of all ages and technical abilities. Extensive user testing and accessibility audits were key.'
   },
+  {
+    title: 'Martech Campaign Optimizer',
+    category: 'AI & Machine Learning',
+    description: 'An AI-powered tool that analyzes marketing campaign data to provide actionable insights and automated budget allocation, increasing ROI by 35%.',
+    imageId: 'portfolio-4',
+    metrics: ['35% average increase in campaign ROI', 'Automated 80% of manual reporting tasks', 'Processed terabytes of data daily'],
+    challenges: 'Developing machine learning models that could accurately predict campaign performance across diverse channels with fluctuating market conditions.'
+  },
+  {
+    title: 'Streamify Media Platform',
+    category: 'Cloud & DevOps',
+    description: 'A global video streaming service built on a serverless architecture with a custom CDN to deliver low-latency content to millions of users.',
+    imageId: 'portfolio-5',
+    metrics: ['Sub-second video start time', 'Scaled to 5 million concurrent viewers', 'Reduced infrastructure costs by 40%'],
+    challenges: 'Architecting a cost-effective and highly scalable infrastructure that could handle massive, unpredictable spikes in traffic during live events.'
+  },
+  {
+    title: 'SecureAuth IAM Solution',
+    category: 'Cybersecurity',
+    description: 'An enterprise-grade Identity and Access Management (IAM) solution providing single sign-on (SSO), multi-factor authentication (MFA), and granular access control.',
+    imageId: 'portfolio-6',
+    metrics: ['Unified authentication for 50+ applications', 'Blocked 99.9% of credential stuffing attacks', 'Reduced helpdesk password reset tickets by 60%'],
+    challenges: 'Integrating with a wide array of legacy and modern applications, each with unique authentication protocols, while ensuring a seamless user experience.'
+  }
 ];
 
 export const testimonials = [

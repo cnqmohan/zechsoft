@@ -116,6 +116,24 @@
       "imageHint": "healthcare app"
     },
     {
+      "id": "portfolio-4",
+      "description": "Marketing analytics dashboard on a screen",
+      "imageUrl": "https://picsum.photos/seed/p4/600/400",
+      "imageHint": "marketing analytics"
+    },
+    {
+      "id": "portfolio-5",
+      "description": "Interface of a video streaming platform",
+      "imageUrl": "https://picsum.photos/seed/p5/600/400",
+      "imageHint": "video streaming"
+    },
+    {
+      "id": "portfolio-6",
+      "description": "Cybersecurity dashboard showing user access logs",
+      "imageUrl": "https://picsum.photos/seed/p6/600/400",
+      "imageHint": "identity security"
+    },
+    {
       "id": "team-1",
       "description": "Portrait of CEO",
       "imageUrl": "https://picsum.photos/seed/t1/400/400",

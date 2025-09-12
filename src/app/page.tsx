@@ -14,6 +14,7 @@ import { ScrollFadeIn } from '@/components/scroll-fade-in';
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const featuredServices = services.flatMap(s => s.items).slice(0, 3);
+  const recentWork = portfolioItems.slice(0, 6);
 
   const serviceIcons: { [key: string]: React.ElementType } = {
     'Web Development': Code,
@@ -77,6 +78,18 @@ export default function Home() {
                   return (
                     <Link key={service.title} href={`/services#${service.slug}`} className="group">
                     <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
+                      {serviceImage && (
+                          <div className="overflow-hidden">
+                              <Image
+                                src={serviceImage.imageUrl}
+                                alt={serviceImage.description}
+                                width={600}
+                                height={400}
+                                className="object-cover w-full h-auto aspect-video group-hover:scale-105 transition-transform duration-300"
+                                data-ai-hint={serviceImage.imageHint}
+                              />
+                          </div>
+                      )}
                        <CardHeader className="flex-row items-center gap-4">
                           <Icon className="w-10 h-10 text-primary" />
                           <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
@@ -110,7 +123,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-              {portfolioItems.map((item) => {
+              {recentWork.map((item) => {
                  const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                  return (
                   <Card key={item.title} className="overflow-hidden group bg-background shadow-lg hover:shadow-xl transition-all duration-300">
