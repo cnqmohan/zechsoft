@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck, Target, Lightbulb, Heart, Book, UserCheck, Star, Trophy } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck, Target, Lightbulb, Heart, Book, UserCheck, Star, Trophy, Award, GitMerge, Headset, Scaling } from 'lucide-react';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 import { services, portfolioItems, coreValues } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -35,6 +35,39 @@ export default function Home() {
     'Reliability': Book,
     'Client Focus': UserCheck,
   };
+
+  const whyChooseUsItems = [
+    {
+      icon: Award,
+      title: 'Proven Expertise',
+      description: 'Our team consists of seasoned professionals with a track record of delivering successful projects across various industries.'
+    },
+    {
+      icon: UserCheck,
+      title: 'Client-Centric Approach',
+      description: 'We prioritize your needs and goals, working collaboratively to ensure the final product exceeds your expectations.'
+    },
+    {
+      icon: GitMerge,
+      title: 'Agile Methodology',
+      description: 'We use agile development practices to ensure flexibility, transparency, and rapid delivery of high-quality software.'
+    },
+    {
+      icon: Scaling,
+      title: 'Scalable Solutions',
+      description: 'We build future-proof applications that can grow with your business, ensuring long-term value and performance.'
+    },
+    {
+      icon: Headset,
+      title: 'Dedicated Support',
+      description: 'Our commitment doesn\'t end at launch. We offer ongoing support and maintenance to keep your application running smoothly.'
+    },
+     {
+      icon: Star,
+      title: 'Commitment to Quality',
+      description: 'We adhere to the highest standards of quality, ensuring that every project we deliver is robust, reliable, and secure.'
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -208,6 +241,36 @@ export default function Home() {
           </div>
         </section>
       </ScrollFadeIn>
+
+      <ScrollFadeIn>
+        <section id="why-choose-us" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose Zechsoft?</h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                We are more than just a software company. We are your trusted partner in digital innovation.
+              </p>
+            </div>
+            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+              {whyChooseUsItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Card key={item.title} className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                    <CardContent className="p-6 flex flex-col items-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </ScrollFadeIn>
+
       <ScrollFadeIn>
         <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
@@ -296,5 +359,6 @@ export default function Home() {
     
 
     
+
 
 
