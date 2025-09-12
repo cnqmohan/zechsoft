@@ -71,45 +71,47 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white">
-        {heroImage && (
-            <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={heroImage.imageHint}
-            />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container px-4 md:px-6 z-10">
-          <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Engineering Your Digital Vision
-            </h1>
-            <p className="max-w-[700px] text-lg md:text-xl text-white/90">
-              We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
-                <Link href="/contact">Get a Quote</Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/services">Our Services</Link>
-              </Button>
+      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+            <div className="flex flex-col justify-center space-y-4">
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+                Engineering Your Digital Vision
+              </h1>
+              <p className="max-w-[700px] text-muted-foreground md:text-xl">
+                We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg">
+                  <Link href="/contact">Get a Quote</Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/services">Our Services</Link>
+                </Button>
+              </div>
             </div>
+            {heroImage && (
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    width={1200}
+                    height={800}
+                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+                    priority
+                    data-ai-hint={heroImage.imageHint}
+                />
+            )}
           </div>
         </div>
       </section>
 
       <ScrollFadeIn>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">About Zechsoft</div>
+                  <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm text-foreground">About Zechsoft</div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                     Crafting Digital Excellence
                   </h2>
@@ -137,7 +139,7 @@ export default function Home() {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">Our Services</div>
@@ -359,6 +361,7 @@ export default function Home() {
     
 
     
+
 
 
 
