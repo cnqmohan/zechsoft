@@ -13,6 +13,7 @@ import { ScrollFadeIn } from '@/components/scroll-fade-in';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
+  const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-us');
   const featuredServices = services.flatMap(s => s.items).slice(0, 3);
   const recentWork = portfolioItems.slice(0, 6);
 
@@ -60,6 +61,39 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ScrollFadeIn>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">About Zechsoft</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    Crafting Digital Excellence
+                  </h2>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                    We are a passionate team of developers, designers, and strategists dedicated to building exceptional software that solves real-world problems and drives business success.
+                  </p>
+                   <Button asChild>
+                    <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  </Button>
+                </div>
+              </div>
+              {aboutImage && (
+                <Image
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  width={800}
+                  height={500}
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                  data-ai-hint={aboutImage.imageHint}
+                />
+              )}
+            </div>
+          </div>
+        </section>
+      </ScrollFadeIn>
 
       <ScrollFadeIn>
         <section id="services" className="w-full py-12 md:py-24 lg:py-32">
