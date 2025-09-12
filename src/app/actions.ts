@@ -1,14 +1,10 @@
+
 'use server';
 import {
   generateQuoteEstimate,
   GenerateQuoteEstimateInput,
   GenerateQuoteEstimateOutput,
 } from '@/ai/flows/generate-quote-estimate';
-import {
-  summarizeBlogArticle,
-  SummarizeBlogArticleInput,
-  SummarizeBlogArticleOutput,
-} from '@/ai/flows/summarize-blog-article';
 import { z } from 'zod';
 
 export type QuoteState = {
@@ -55,28 +51,5 @@ export async function getQuoteEstimate(
       form: input,
       error: 'An unexpected error occurred. Please try again.',
     };
-  }
-}
-
-export type SummaryState = {
-  result?: SummarizeBlogArticleOutput;
-  error?: string;
-}
-
-export async function getArticleSummary(
-  prevState: SummaryState,
-  formData: FormData
-): Promise<SummaryState> {
-  const articleText = formData.get('articleText') as string;
-
-  if (!articleText || articleText.length < 100) {
-    return { error: 'Article content is too short to summarize.' };
-  }
-
-  try {
-    const result = await summarizeBlogArticle({ articleText });
-    return { result };
-  } catch (e) {
-    return { error: 'Failed to generate summary. Please try again.' };
   }
 }

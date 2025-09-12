@@ -24,7 +24,7 @@ export function Header() {
             <Logo />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.slice(1,-1).map((link) => (
+            {navLinks.slice(1).map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -90,5 +90,3 @@ export function Header() {
     </header>
   );
 }
-
-    

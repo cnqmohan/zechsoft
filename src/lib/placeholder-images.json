@@ -174,24 +174,6 @@
       "description": "Avatar of a third client",
       "imageUrl": "https://picsum.photos/seed/test3/100/100",
       "imageHint": "person avatar"
-    },
-    {
-      "id": "blog-1",
-      "description": "Abstract representation of AI",
-      "imageUrl": "https://picsum.photos/seed/b1/800/500",
-      "imageHint": "artificial intelligence"
-    },
-    {
-      "id": "blog-2",
-      "description": "Cloud computing infrastructure",
-      "imageUrl": "https://picsum.photos/seed/b2/800/500",
-      "imageHint": "cloud computing"
-    },
-    {
-      "id": "blog-3",
-      "description": "Cybersecurity lock graphic",
-      "imageUrl": "https://picsum.photos/seed/b3/800/500",
-      "imageHint": "cyber security"
     }
   ]
 }
