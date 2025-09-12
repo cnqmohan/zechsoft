@@ -84,7 +84,7 @@ export default function PortfolioPage() {
                 <h2 className="text-2xl font-bold tracking-tighter">Have a project in mind?</h2>
                 <p className="text-muted-foreground mt-2 mb-4">Let's turn your idea into a reality.</p>
                 <Button asChild size="lg">
-                  <Link href="/quote">Get a Free Quote</Link>
+                  <Link href="/contact">Get a Free Quote</Link>
                 </Button>
               </div>
           </ScrollFadeIn>
@@ -93,3 +93,5 @@ export default function PortfolioPage() {
     </>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -82,10 +83,12 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-end space-x-2">
             <Button asChild>
-              <Link href="/quote">Get a Quote</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
         </div>
       </div>
     </header>
   );
 }
+
+    

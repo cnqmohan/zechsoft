@@ -8,7 +8,7 @@ export const navLinks = [
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Blog', href: '/blog' },
-  { name: 'Get a Quote', href: '/quote' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 type ServiceItem = {
@@ -421,5 +421,7 @@ export const blogPosts = [
         `,
     },
 ];
+
+    
 
     

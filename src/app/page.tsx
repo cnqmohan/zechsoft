@@ -51,7 +51,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg">
-                <Link href="/quote">Get a Quote</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
                 <Link href="/services">Our Services</Link>
@@ -189,7 +189,7 @@ export default function Home() {
             </div>
             <div className="mx-auto w-full max-w-sm space-x-2">
               <Button asChild size="lg">
-                <Link href="/quote">Get Your Free Quote</Link>
+                <Link href="/contact">Get Your Free Quote</Link>
               </Button>
             </div>
           </div>
@@ -198,5 +198,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
