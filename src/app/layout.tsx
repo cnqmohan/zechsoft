@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { FloatingActionButtons } from '@/components/floating-action-buttons';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <Toaster />
+        <FloatingActionButtons />
       </body>
     </html>
   );
