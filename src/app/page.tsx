@@ -73,17 +73,26 @@ export default function Home() {
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {featuredServices.map((service) => {
-                  const Icon = serviceIcons[service.title] || Code;
+                  const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
                   return (
                     <Link href={`/services#${service.slug}`} key={service.title} className="block group">
-                      <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
-                        <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-                          <div className="bg-primary/10 p-3 rounded-full">
-                            <Icon className="h-6 w-6 text-primary" />
+                      <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
+                        {serviceImage && (
+                           <div className="overflow-hidden">
+                            <Image
+                              src={serviceImage.imageUrl}
+                              alt={serviceImage.description}
+                              width={600}
+                              height={400}
+                              className="object-cover w-full h-auto aspect-[3/2] group-hover:scale-105 transition-transform duration-500"
+                              data-ai-hint={serviceImage.imageHint}
+                            />
                           </div>
+                        )}
+                        <CardHeader>
                           <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="flex-grow">
                           <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
                         </CardContent>
                       </Card>
