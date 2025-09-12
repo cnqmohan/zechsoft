@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -28,7 +29,7 @@ export function TestimonialsCarousel() {
           return (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-4 h-full">
-                <Card className="flex flex-col justify-between h-full bg-background shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card className="flex flex-col justify-between h-full bg-background shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                   <CardContent className="flex flex-col items-start gap-4 p-6">
                     <p className="text-muted-foreground text-lg">"{testimonial.quote}"</p>
                     <div className="flex items-center gap-4 pt-4">
