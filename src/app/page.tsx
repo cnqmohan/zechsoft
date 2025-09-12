@@ -37,7 +37,7 @@ export default function Home() {
         <div className="relative container px-4 md:px-6 z-10">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Building the Future, One Line of Code at a Time
+              Your Vision, Engineered.
             </h1>
             <p className="max-w-[700px] text-lg md:text-xl text-primary-foreground/90">
               We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
@@ -56,57 +56,52 @@ export default function Home() {
 
       <section id="services" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+          <div className="grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="space-y-4">
               <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Services</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What We Do</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What We Do</h2>
+              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
                 From concept to launch, we provide comprehensive software development services tailored to your unique needs.
               </p>
+              <div className="pt-4">
+                <Button asChild>
+                  <Link href="/services">View All Services</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="grid gap-6 mt-10 lg:mt-0">
+              {featuredServices.map((service) => {
+                const Icon = serviceIcons[service.title] || Code;
+                return (
+                  <Card key={service.title} className="bg-secondary/50 border border-border/30 hover:bg-secondary hover:border-border/60 transition-all duration-300 group">
+                    <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
+                      <Icon className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-xl">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
-            {featuredServices.map((service) => {
-              const Icon = serviceIcons[service.title] || Code;
-              return (
-                <Card key={service.title} className="bg-secondary/50 border-0 hover:bg-secondary transition-colors duration-300">
-                  <CardHeader className="gap-4">
-                    <Icon className="h-8 w-8 text-primary" />
-                    <CardTitle>{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
-                  </CardContent>
-                  <CardFooter>
-                     <Button variant="link" asChild className="p-0 h-auto">
-                        <Link href="/services">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                     </Button>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
-           <div className="text-center mt-12">
-              <Button asChild>
-                <Link href="/services">View All Services</Link>
-              </Button>
-            </div>
         </div>
       </section>
       
       <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Recent Work</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Check out some of the successful projects we've delivered for our clients.
             </p>
           </div>
-          <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 mt-12">
+          <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {featuredPortfolio.map((item) => {
                const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                return (
-                <Card key={item.title} className="overflow-hidden group bg-background/50 border-0">
+                <Card key={item.title} className="overflow-hidden group bg-background/50 border border-border/30 hover:border-border/60 transition-colors">
                    {portfolioImage && (
                     <div className="overflow-hidden">
                        <Image
@@ -127,7 +122,7 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground line-clamp-3">{item.description}</p>
                   </CardContent>
                    <CardFooter>
-                     <Button variant="link" asChild className="p-0 h-auto">
+                     <Button variant="link" asChild className="p-0 h-auto font-semibold">
                         <Link href={`/portfolio`}>View Case Study <ArrowRight className="ml-2 h-4 w-4" /></Link>
                      </Button>
                   </CardFooter>
@@ -135,8 +130,8 @@ export default function Home() {
               )}
             )}
           </div>
-           <div className="text-center mt-12">
-              <Button asChild>
+           <div className="text-center mt-16">
+              <Button asChild size="lg">
                 <Link href="/portfolio">Explore Our Portfolio</Link>
               </Button>
             </div>
