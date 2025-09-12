@@ -1,10 +1,11 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Abstract team collaboration in a modern office",
-      "imageUrl": "https://picsum.photos/seed/hero/1600/900",
-      "imageHint": "modern office"
+      "description": "Professional IT team collaborating in a modern office with digital overlays",
+      "imageUrl": "https://picsum.photos/seed/hero-it/1600/900",
+      "imageHint": "IT collaboration"
     },
     {
       "id": "about-us",
@@ -49,6 +50,18 @@
       "imageHint": "cloud infrastructure"
     },
     {
+      "id": "service-devops",
+      "description": "A CI/CD pipeline diagram on a monitor.",
+      "imageUrl": "https://picsum.photos/seed/devops/600/400",
+      "imageHint": "devops pipeline"
+    },
+    {
+      "id": "service-hosting",
+      "description": "A secure server rack for web hosting.",
+      "imageUrl": "https://picsum.photos/seed/hosting/600/400",
+      "imageHint": "server hosting"
+    },
+    {
       "id": "service-data-analytics",
       "description": "Business intelligence dashboard with charts and graphs",
       "imageUrl": "https://picsum.photos/seed/analytics/600/400",
@@ -59,6 +72,30 @@
       "description": "Digital lock and shield representing cybersecurity",
       "imageUrl": "https://picsum.photos/seed/cyber/600/400",
       "imageHint": "cyber security"
+    },
+     {
+      "id": "service-compliance",
+      "description": "A person reviewing a compliance checklist document.",
+      "imageUrl": "https://picsum.photos/seed/compliance/600/400",
+      "imageHint": "compliance document"
+    },
+    {
+      "id": "service-digital-marketing",
+      "description": "A screen showing social media analytics and growth charts.",
+      "imageUrl": "https://picsum.photos/seed/marketing/600/400",
+      "imageHint": "digital marketing"
+    },
+    {
+      "id": "service-consulting",
+      "description": "A consultant presenting a strategy to a team in an office.",
+      "imageUrl": "https://picsum.photos/seed/consulting/600/400",
+      "imageHint": "business consulting"
+    },
+    {
+      "id": "service-ai-ml",
+      "description": "An abstract visualization of a neural network.",
+      "imageUrl": "https://picsum.photos/seed/aiml/600/400",
+      "imageHint": "neural network"
     },
     {
       "id": "portfolio-1",

@@ -11,21 +11,20 @@ import { services, portfolioItems } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
 
-const serviceIcons: { [key: string]: React.ElementType } = {
-  'Custom Web Development': Code,
-  'Mobile App Development': Smartphone,
-  'Enterprise Solutions': Users,
-  'UI/UX Design': BrainCircuit,
-  'Product Maintenance & Support': CheckCircle,
-  'Cloud & DevOps': CloudCog,
-  'Data Analytics & BI': AreaChart,
-  'Cybersecurity Consulting': ShieldCheck,
-};
-
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
-  const featuredServices = services.slice(0, 3);
-  const featuredPortfolio = portfolioItems.slice(0, 3);
+  const featuredServices = services.flatMap(s => s.items).slice(0, 3);
+
+  const serviceIcons: { [key: string]: React.ElementType } = {
+    'Web Development': Code,
+    'Mobile App Development': Smartphone,
+    'Software Development': Users,
+    'UI/UX Design': BrainCircuit,
+    'Product Maintenance & Support': CheckCircle,
+    'Cloud Computing': CloudCog,
+    'Data Services': AreaChart,
+    'Cybersecurity Services': ShieldCheck,
+  };
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -74,28 +73,20 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {featuredServices.map((service) => {
                   const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
+                  const Icon = serviceIcons[service.title] || Code;
                   return (
-                    <Link href={`/services#${service.slug}`} key={service.title} className="block group">
-                      <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
-                        {serviceImage && (
-                           <div className="overflow-hidden">
-                            <Image
-                              src={serviceImage.imageUrl}
-                              alt={serviceImage.description}
-                              width={600}
-                              height={400}
-                              className="object-cover w-full h-auto aspect-[3/2] group-hover:scale-105 transition-transform duration-500"
-                              data-ai-hint={serviceImage.imageHint}
-                            />
-                          </div>
-                        )}
-                        <CardHeader>
+                    <Link key={service.title} href={`/services#${service.slug}`} className="group">
+                    <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
+                       <CardHeader className="flex-row items-center gap-4">
+                          <Icon className="w-10 h-10 text-primary" />
                           <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow">
-                          <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+                          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            {service.points.slice(0, 3).map(point => <li key={point}>{point}</li>)}
+                          </ul>
                         </CardContent>
-                      </Card>
+                    </Card>
                     </Link>
                   );
                 })}
@@ -119,7 +110,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-              {featuredPortfolio.map((item) => {
+              {portfolioItems.map((item) => {
                  const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                  return (
                   <Card key={item.title} className="overflow-hidden group bg-background shadow-lg hover:shadow-xl transition-all duration-300">
@@ -194,3 +185,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

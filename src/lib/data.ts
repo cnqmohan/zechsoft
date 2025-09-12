@@ -1,3 +1,7 @@
+
+import { Code, Cloud, Lock, LineChart, Briefcase, Database, type LucideIcon, Smartphone, Users, BrainCircuit, CheckCircle, CloudCog, AreaChart, ShieldCheck } from 'lucide-react';
+import type { ReactElement, ElementType } from 'react';
+
 export const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -7,64 +11,215 @@ export const navLinks = [
   { name: 'Get a Quote', href: '/quote' },
 ];
 
-export const services = [
+type ServiceItem = {
+  title: string;
+  slug: string;
+  points: string[];
+  imageId: string; 
+};
+
+type ServiceCategory = {
+  category: string;
+  icon: ElementType;
+  items: ServiceItem[];
+};
+
+export const services: ServiceCategory[] = [
   {
-    slug: 'custom-web-development',
-    title: 'Custom Web Development',
-    shortDescription: 'Building robust, scalable, and secure web applications tailored to your business needs.',
-    description: 'We specialize in creating high-performance web applications using modern technologies like React, Next.js, and Node.js. From complex enterprise platforms to dynamic single-page applications, we provide end-to-end development services, ensuring a seamless user experience and optimal performance across all devices. Our process includes thorough planning, agile development, and rigorous testing to deliver solutions that are not only powerful but also reliable and maintainable.',
-    imageId: 'service-web-dev',
+    category: 'Core Development Services',
+    icon: Code,
+    items: [
+      {
+        title: 'Web Development',
+        slug: 'web-development',
+        points: [
+          'Custom web applications',
+          'Responsive websites (desktop & mobile)',
+          'E-commerce platforms',
+          'CMS development (WordPress, Drupal, Joomla, etc.)',
+          'Progressive Web Apps (PWAs)',
+        ],
+        imageId: 'service-web-dev',
+      },
+      {
+        title: 'Mobile App Development',
+        slug: 'mobile-app-development',
+        points: [
+          'Android & iOS app development',
+          'Cross-platform apps (Flutter, React Native, Xamarin)',
+          'Native apps (Java/Kotlin for Android, Swift for iOS)',
+          'App UI/UX design',
+          'App testing & deployment',
+        ],
+        imageId: 'service-mobile-dev',
+      },
+      {
+        title: 'Software Development',
+        slug: 'software-development',
+        points: [
+          'Custom enterprise software',
+          'ERP, CRM solutions',
+          'Automation tools',
+          'AI & ML powered applications',
+          'API development & integration',
+        ],
+        imageId: 'service-enterprise',
+      },
+    ],
   },
   {
-    slug: 'mobile-app-development',
-    title: 'Mobile App Development',
-    shortDescription: 'Crafting intuitive and high-performance native and cross-platform mobile applications.',
-    description: 'Our team develops mobile apps for iOS and Android that are not only visually stunning but also highly functional. We focus on user engagement, performance, and scalability to deliver apps that your users will love. We use technologies like React Native and native SDKs to build apps that are fast, responsive, and provide a great user experience.',
-    imageId: 'service-mobile-dev',
+    category: 'Cloud & Infrastructure Services',
+    icon: CloudCog,
+    items: [
+      {
+        title: 'Cloud Computing',
+        slug: 'cloud-computing',
+        points: [
+          'Cloud migration (AWS, Azure, Google Cloud)',
+          'Cloud storage & backup solutions',
+          'SaaS, PaaS, IaaS solutions',
+          'Serverless architecture',
+          'Cloud security & monitoring',
+        ],
+        imageId: 'service-cloud-devops',
+      },
+      {
+        title: 'DevOps Services',
+        slug: 'devops-services',
+        points: [
+          'Continuous Integration/Continuous Deployment (CI/CD)',
+          'Containerization (Docker, Kubernetes)',
+          'Infrastructure as Code (IaC)',
+          'Monitoring & performance tuning',
+        ],
+        imageId: 'service-devops',
+      },
+      {
+        title: 'Hosting & Domain Services',
+        slug: 'hosting-domain-services',
+        points: [
+          'Web hosting (shared, VPS, dedicated, cloud)',
+          'Domain registration & management',
+          'SSL certification',
+        ],
+        imageId: 'service-hosting',
+      },
+    ],
   },
   {
-    slug: 'enterprise-solutions',
-    title: 'Enterprise Solutions',
-    shortDescription: 'Developing large-scale software solutions to streamline your business operations.',
-    description: 'We build custom enterprise software, including ERPs, CRMs, and other business management tools. Our solutions are designed to improve efficiency, automate workflows, and provide valuable data insights for large organizations. We focus on creating scalable and secure architectures that can grow with your business.',
-    imageId: 'service-enterprise',
+    category: 'Security & Compliance',
+    icon: ShieldCheck,
+    items: [
+      {
+        title: 'Cybersecurity Services',
+        slug: 'cybersecurity-services',
+        points: [
+          'Vulnerability assessment & penetration testing',
+          'Network & endpoint security',
+          'Identity & access management',
+          'Data encryption & security monitoring',
+        ],
+        imageId: 'service-cybersecurity',
+      },
+      {
+        title: 'Compliance',
+        slug: 'compliance',
+        points: ['GDPR, HIPAA, ISO, PCI-DSS'],
+        imageId: 'service-compliance',
+      },
+    ],
   },
   {
-    slug: 'ui-ux-design',
-    title: 'UI/UX Design',
-    shortDescription: 'Creating beautiful, user-centric designs that enhance usability and drive engagement.',
-    description: 'Good design is good business. Our UI/UX design process focuses on understanding your users to create interfaces that are intuitive, accessible, and enjoyable. We combine research, strategy, and creativity to deliver exceptional digital experiences.',
-    imageId: 'service-ui-ux',
+    category: 'Digital Growth Services',
+    icon: AreaChart,
+    items: [
+      {
+        title: 'Digital Marketing & Social Media',
+        slug: 'digital-marketing-social-media',
+        points: [
+          'SEO (Search Engine Optimization)',
+          'SEM (Google Ads, PPC campaigns)',
+          'Social media marketing (Facebook, Instagram, LinkedIn, etc.)',
+          'Email marketing & automation',
+          'Content marketing & blogging',
+          'Influencer & affiliate marketing',
+        ],
+        imageId: 'service-digital-marketing',
+      },
+      {
+        title: 'Branding & Design',
+        slug: 'branding-design',
+        points: [
+          'Logo & brand identity design',
+          'UI/UX design',
+          'Graphic design & motion graphics',
+          'Video editing & marketing materials',
+        ],
+        imageId: 'service-ui-ux',
+      },
+    ],
   },
   {
-    slug: 'cloud-devops',
-    title: 'Cloud & DevOps',
-    shortDescription: 'Streamlining development and operations for faster delivery and better performance.',
-    description: 'We help you leverage the power of the cloud with our DevOps services. We automate your infrastructure, streamline your CI/CD pipeline, and ensure your applications are scalable, reliable, and secure. Our expertise covers major cloud platforms like AWS, Azure, and Google Cloud.',
-    imageId: 'service-cloud-devops',
+    category: 'Consulting & Support',
+    icon: Briefcase,
+    items: [
+      {
+        title: 'IT Consulting',
+        slug: 'it-consulting',
+        points: [
+          'Digital transformation strategy',
+          'Business process automation',
+          'Technology roadmaps',
+          'Cloud & data strategy consulting',
+          'IT audits & compliance checks',
+        ],
+        imageId: 'service-consulting',
+      },
+      {
+        title: 'IT Support & Maintenance',
+        slug: 'it-support-maintenance',
+        points: [
+          'Remote & onsite support',
+          'Network monitoring & troubleshooting',
+          'Software updates & patch management',
+          'Backup & disaster recovery',
+          '24/7 helpdesk support',
+        ],
+        imageId: 'service-maintenance',
+      },
+    ],
   },
   {
-    slug: 'data-analytics-bi',
-    title: 'Data Analytics & BI',
-    shortDescription: 'Turning your data into actionable insights with business intelligence and analytics.',
-    description: 'Unlock the potential of your data. We provide end-to-end data analytics and business intelligence services, from data warehousing and ETL to building interactive dashboards and predictive models. We help you make data-driven decisions that foster growth and efficiency.',
-    imageId: 'service-data-analytics',
-  },
-  {
-    slug: 'cybersecurity-consulting',
-    title: 'Cybersecurity Consulting',
-    shortDescription: 'Protecting your digital assets with comprehensive cybersecurity strategies and solutions.',
-    description: 'In a world of evolving threats, we provide robust cybersecurity services to protect your business. Our offerings include vulnerability assessments, penetration testing, security audits, and implementing proactive security measures to safeguard your applications and infrastructure from cyber attacks.',
-    imageId: 'service-cybersecurity',
-  },
-  {
-    slug: 'product-maintenance-support',
-    title: 'Product Maintenance & Support',
-    shortDescription: 'Ensuring your software remains up-to-date, secure, and running smoothly.',
-    description: 'Our commitment doesn’t end at launch. We provide ongoing maintenance and support services to ensure your application remains secure, performant, and compatible with the latest technologies. We handle updates, bug fixes, and performance monitoring so you can focus on your business.',
-    imageId: 'service-maintenance',
+    category: 'Data & Analytics',
+    icon: Database,
+    items: [
+      {
+        title: 'Data Services',
+        slug: 'data-services',
+        points: [
+          'Big Data processing',
+          'Business Intelligence (BI) solutions',
+          'Predictive analytics',
+          'Data warehousing',
+          'Data visualization (Power BI, Tableau, etc.)',
+        ],
+        imageId: 'service-data-analytics',
+      },
+      {
+        title: 'AI & Machine Learning',
+        slug: 'ai-machine-learning',
+        points: [
+          'Chatbots & virtual assistants',
+          'Predictive modeling',
+          'Natural Language Processing (NLP)',
+          'Computer vision solutions',
+        ],
+        imageId: 'service-ai-ml',
+      },
+    ],
   },
 ];
+
 
 export const teamMembers = [
   {
@@ -260,3 +415,5 @@ export const blogPosts = [
         `,
     },
 ];
+
+    
