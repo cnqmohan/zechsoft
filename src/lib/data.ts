@@ -300,3 +300,29 @@ export const testimonials = [
     imageId: 'testimonial-3',
   },
 ];
+export const coreValues = [
+  {
+    title: 'Quality',
+    description: 'ISO certified quality systems',
+  },
+  {
+    title: 'Safety',
+    description: 'Zero accident policy',
+  },
+  {
+    title: 'Innovation',
+    description: 'Continuous process improvement',
+  },
+  {
+    title: 'Integrity',
+    description: 'Transparent business practices',
+  },
+  {
+    title: 'Reliability',
+    description: 'On-time project delivery',
+  },
+  {
+    title: 'Client Focus',
+    description: 'Tailored solutions',
+  },
+];

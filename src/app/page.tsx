@@ -5,9 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck, Target, Lightbulb, Heart, Book, UserCheck } from 'lucide-react';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
-import { services, portfolioItems } from '@/lib/data';
+import { services, portfolioItems, coreValues } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ScrollFadeIn } from '@/components/scroll-fade-in';
 
@@ -26,6 +26,14 @@ export default function Home() {
     'Cloud Computing': CloudCog,
     'Data Services': AreaChart,
     'Cybersecurity Services': ShieldCheck,
+  };
+  const valueIcons: { [key: string]: React.ElementType } = {
+    'Quality': Target,
+    'Safety': ShieldCheck,
+    'Innovation': Lightbulb,
+    'Integrity': Heart,
+    'Reliability': Book,
+    'Client Focus': UserCheck,
   };
 
   return (
@@ -146,9 +154,36 @@ export default function Home() {
           </div>
         </section>
       </ScrollFadeIn>
-      
       <ScrollFadeIn>
-        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="values" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Core Values</h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                The fundamental principles that guide our approach to business.
+              </p>
+            </div>
+            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+              {coreValues.map((value) => {
+                const Icon = valueIcons[value.title];
+                return (
+                  <Card key={value.title} className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                    <CardContent className="p-6 flex flex-col items-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold">{value.title}</h3>
+                      <p className="text-muted-foreground text-sm">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </ScrollFadeIn>
+      <ScrollFadeIn>
+        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Recent Work</h2>
@@ -232,7 +267,7 @@ export default function Home() {
     </div>
   );
 }
-
     
 
     
+
