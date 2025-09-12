@@ -40,6 +40,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   {serviceImage && (
+                    <div className="bg-secondary/30 p-4 rounded-lg">
                     <Image
                       src={serviceImage.imageUrl}
                       alt={serviceImage.description}
@@ -48,6 +49,7 @@ export default function ServicesPage() {
                       className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                       data-ai-hint={serviceImage.imageHint}
                     />
+                    </div>
                   )}
                 </div>
               );

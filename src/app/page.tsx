@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white">
+      <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-primary-foreground">
         {heroImage && (
             <Image
                 src={heroImage.imageUrl}
@@ -33,7 +33,7 @@ export default function Home() {
                 data-ai-hint={heroImage.imageHint}
             />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative container px-4 md:px-6 z-10">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
@@ -43,10 +43,10 @@ export default function Home() {
               We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button asChild size="lg">
                 <Link href="/quote">Get a Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="secondary">
                 <Link href="/services">Our Services</Link>
               </Button>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
             {featuredServices.map((service) => {
               const Icon = serviceIcons[service.title] || Code;
               return (
-                <Card key={service.title} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={service.title} className="bg-secondary/50 border-0 hover:bg-secondary transition-colors duration-300">
                   <CardHeader className="gap-4">
                     <Icon className="h-8 w-8 text-primary" />
                     <CardTitle>{service.title}</CardTitle>
@@ -106,7 +106,7 @@ export default function Home() {
             {featuredPortfolio.map((item) => {
                const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                return (
-                <Card key={item.title} className="overflow-hidden group">
+                <Card key={item.title} className="overflow-hidden group bg-background/50 border-0">
                    {portfolioImage && (
                     <div className="overflow-hidden">
                        <Image
@@ -155,16 +155,16 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to Start Your Project?</h2>
-            <p className="mx-auto max-w-[600px] text-primary-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Let's build something amazing together. Contact us for a free, no-obligation quote.
             </p>
           </div>
           <div className="mx-auto w-full max-w-sm space-x-2">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button asChild size="lg">
               <Link href="/quote">Get Your Free Quote</Link>
             </Button>
           </div>

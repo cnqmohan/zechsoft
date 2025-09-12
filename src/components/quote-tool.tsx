@@ -42,7 +42,7 @@ export function QuoteTool() {
 
   return (
     <div className="space-y-8">
-      <Card>
+      <Card className='bg-secondary/30'>
         <CardHeader>
           <CardTitle>Intelligent Quote Tool</CardTitle>
           <CardDescription>Fill out the form below to get an AI-generated project estimate.</CardDescription>
@@ -96,7 +96,7 @@ export function QuoteTool() {
       <div ref={resultRef}>
         {state.error && <Alert variant="destructive"><AlertTitle>Error</AlertTitle><AlertDescription>{state.error}</AlertDescription></Alert>}
         {state.result && (
-          <Card className="bg-primary/5">
+          <Card className="bg-secondary/30">
             <CardHeader>
               <CardTitle>Your AI-Generated Estimate</CardTitle>
               <CardDescription>This is a preliminary estimate based on the information you provided. A more detailed quote will be provided after a consultation.</CardDescription>

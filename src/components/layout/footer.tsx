@@ -8,7 +8,7 @@ import { navLinks } from '@/lib/data';
 
 export function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t border-border/40">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="flex flex-col gap-4 md:col-span-3">
@@ -19,17 +19,17 @@ export function Footer() {
               Building the Future, One Line of Code at a Time.
             </p>
             <div className="flex items-center space-x-2">
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="Twitter">
                   <Twitter className="h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="GitHub">
                   <Github className="h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="LinkedIn">
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -70,7 +70,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
+        <div className="mt-8 border-t border-border/40 pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Zechsoft. All rights reserved.</p>
         </div>
       </div>

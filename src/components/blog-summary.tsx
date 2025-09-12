@@ -37,8 +37,8 @@ export function ArticleSummary({ articleText }: { articleText: string }) {
 
   return (
     <div ref={accordionRef} className="mb-8">
-      <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1">
+      <Accordion type="single" collapsible className="w-full bg-secondary/30 rounded-lg px-4">
+        <AccordionItem value="item-1" className="border-b-0">
           <AccordionTrigger>
             <span className="font-semibold text-lg">Article Quick Summary</span>
           </AccordionTrigger>
@@ -53,7 +53,7 @@ export function ArticleSummary({ articleText }: { articleText: string }) {
               </div>
             )}
             {state.result && (
-              <Alert>
+              <Alert className="bg-background/50">
                 <Terminal className="h-4 w-4" />
                 <AlertTitle>AI Generated Summary</AlertTitle>
                 <AlertDescription>

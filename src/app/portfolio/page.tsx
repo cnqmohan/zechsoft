@@ -29,7 +29,7 @@ export default function PortfolioPage() {
             {portfolioItems.map((item) => {
               const itemImage = PlaceHolderImages.find((p) => p.id === item.imageId);
               return (
-                <Card key={item.title} className="w-full overflow-hidden shadow-lg">
+                <Card key={item.title} className="w-full overflow-hidden shadow-lg bg-secondary/30">
                   <div className="grid md:grid-cols-2">
                     <div className="relative">
                       {itemImage && (
@@ -44,7 +44,7 @@ export default function PortfolioPage() {
                       )}
                     </div>
                     <div className="flex flex-col p-6 md:p-8">
-                      <Badge variant="secondary" className="w-fit mb-2">{item.category}</Badge>
+                      <Badge variant="default" className="w-fit mb-2">{item.category}</Badge>
                       <h3 className="text-2xl font-bold">{item.title}</h3>
                       <p className="mt-2 text-muted-foreground">{item.description}</p>
                       

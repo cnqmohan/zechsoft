@@ -49,7 +49,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <ArticleSummary articleText={post.content} />
 
         <div
-          className="prose prose-lg max-w-none mx-auto prose-h3:text-foreground prose-h3:font-semibold prose-a:text-primary hover:prose-a:text-primary/80"
+          className="prose prose-lg max-w-none mx-auto prose-h3:text-foreground prose-h3:font-semibold prose-a:text-primary hover:prose-a:text-primary/80 prose-invert"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
