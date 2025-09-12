@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getQuoteEstimate, QuoteState } from '@/app/actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -31,7 +32,7 @@ function SubmitButton() {
 }
 
 export function QuoteTool() {
-  const [state, formAction] = useFormState(getQuoteEstimate, initialState);
+  const [state, formAction] = useActionState(getQuoteEstimate, initialState);
   const resultRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

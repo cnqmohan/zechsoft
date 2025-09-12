@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getArticleSummary } from '@/app/actions';
 import {
   Accordion,
@@ -23,7 +24,7 @@ function SubmitButton() {
 }
 
 export function ArticleSummary({ articleText }: { articleText: string }) {
-  const [state, formAction] = useFormState(getArticleSummary, { result: undefined, error: undefined });
+  const [state, formAction] = useActionState(getArticleSummary, { result: undefined, error: undefined });
   const formRef = useRef<HTMLFormElement>(null);
   const accordionRef = useRef<HTMLDivElement>(null);
 
