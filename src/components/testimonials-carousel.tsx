@@ -13,14 +13,23 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from 'react';
 
 export function TestimonialsCarousel() {
+   const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
     <Carousel
       opts={{
         align: 'start',
         loop: true,
       }}
+      plugins={[plugin.current]}
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
       className="w-full max-w-5xl mx-auto mt-12"
     >
       <CarouselContent>
