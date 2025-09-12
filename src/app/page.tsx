@@ -70,17 +70,19 @@ export default function Home() {
               {featuredServices.map((service) => {
                 const Icon = serviceIcons[service.title] || Code;
                 return (
-                  <Card key={service.title} className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 group">
-                    <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-                      <div className="bg-primary/10 p-3 rounded-full">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
-                    </CardContent>
-                  </Card>
+                  <Link href={`/services#${service.slug}`} key={service.title} className="block group">
+                    <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full">
+                      <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 );
               })}
           </div>

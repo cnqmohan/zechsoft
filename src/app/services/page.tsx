@@ -27,7 +27,7 @@ export default function ServicesPage() {
               const serviceImage = PlaceHolderImages.find((p) => p.id === service.imageId);
               const isReversed = index % 2 !== 0;
               return (
-                <div key={service.title} className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                <div key={service.title} id={service.slug} className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center scroll-mt-20">
                   <div className={`flex flex-col justify-center space-y-4 ${isReversed ? 'lg:order-last' : ''}`}>
                     <h2 className="text-3xl font-bold tracking-tighter">{service.title}</h2>
                     <p className="max-w-[600px] text-muted-foreground md:text-lg">

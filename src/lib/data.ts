@@ -9,48 +9,56 @@ export const navLinks = [
 
 export const services = [
   {
+    slug: 'custom-web-development',
     title: 'Custom Web Development',
     shortDescription: 'Building robust, scalable, and secure web applications tailored to your business needs.',
     description: 'We specialize in creating high-performance web applications using modern technologies like React, Next.js, and Node.js. From complex enterprise platforms to dynamic single-page applications, we provide end-to-end development services, ensuring a seamless user experience and optimal performance across all devices. Our process includes thorough planning, agile development, and rigorous testing to deliver solutions that are not only powerful but also reliable and maintainable.',
     imageId: 'service-web-dev',
   },
   {
+    slug: 'mobile-app-development',
     title: 'Mobile App Development',
     shortDescription: 'Crafting intuitive and high-performance native and cross-platform mobile applications.',
     description: 'Our team develops mobile apps for iOS and Android that are not only visually stunning but also highly functional. We focus on user engagement, performance, and scalability to deliver apps that your users will love. We use technologies like React Native and native SDKs to build apps that are fast, responsive, and provide a great user experience.',
     imageId: 'service-mobile-dev',
   },
   {
+    slug: 'enterprise-solutions',
     title: 'Enterprise Solutions',
     shortDescription: 'Developing large-scale software solutions to streamline your business operations.',
     description: 'We build custom enterprise software, including ERPs, CRMs, and other business management tools. Our solutions are designed to improve efficiency, automate workflows, and provide valuable data insights for large organizations. We focus on creating scalable and secure architectures that can grow with your business.',
     imageId: 'service-enterprise',
   },
   {
+    slug: 'ui-ux-design',
     title: 'UI/UX Design',
     shortDescription: 'Creating beautiful, user-centric designs that enhance usability and drive engagement.',
     description: 'Good design is good business. Our UI/UX design process focuses on understanding your users to create interfaces that are intuitive, accessible, and enjoyable. We combine research, strategy, and creativity to deliver exceptional digital experiences.',
     imageId: 'service-ui-ux',
   },
   {
+    slug: 'cloud-devops',
     title: 'Cloud & DevOps',
     shortDescription: 'Streamlining development and operations for faster delivery and better performance.',
     description: 'We help you leverage the power of the cloud with our DevOps services. We automate your infrastructure, streamline your CI/CD pipeline, and ensure your applications are scalable, reliable, and secure. Our expertise covers major cloud platforms like AWS, Azure, and Google Cloud.',
     imageId: 'service-cloud-devops',
   },
   {
+    slug: 'data-analytics-bi',
     title: 'Data Analytics & BI',
     shortDescription: 'Turning your data into actionable insights with business intelligence and analytics.',
     description: 'Unlock the potential of your data. We provide end-to-end data analytics and business intelligence services, from data warehousing and ETL to building interactive dashboards and predictive models. We help you make data-driven decisions that foster growth and efficiency.',
     imageId: 'service-data-analytics',
   },
   {
+    slug: 'cybersecurity-consulting',
     title: 'Cybersecurity Consulting',
     shortDescription: 'Protecting your digital assets with comprehensive cybersecurity strategies and solutions.',
     description: 'In a world of evolving threats, we provide robust cybersecurity services to protect your business. Our offerings include vulnerability assessments, penetration testing, security audits, and implementing proactive security measures to safeguard your applications and infrastructure from cyber attacks.',
     imageId: 'service-cybersecurity',
   },
   {
+    slug: 'product-maintenance-support',
     title: 'Product Maintenance & Support',
     shortDescription: 'Ensuring your software remains up-to-date, secure, and running smoothly.',
     description: 'Our commitment doesn’t end at launch. We provide ongoing maintenance and support services to ensure your application remains secure, performant, and compatible with the latest technologies. We handle updates, bug fixes, and performance monitoring so you can focus on your business.',
