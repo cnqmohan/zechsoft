@@ -10,13 +10,14 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">About Us</div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  About Zechsoft
+                  Crafting Digital Excellence
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   We are a passionate team of developers, designers, and strategists dedicated to building exceptional software that solves real-world problems.
@@ -37,7 +38,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-3">
             <div className="flex flex-col items-center text-center">
@@ -65,7 +66,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -79,7 +80,7 @@ export default function AboutPage() {
             {teamMembers.map((member) => {
               const teamImage = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
-                <Card key={member.name} className="text-center border-0 shadow-none bg-transparent">
+                <Card key={member.name} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="flex flex-col items-center gap-4 pt-6">
                     {teamImage && (
                       <Avatar className="h-32 w-32">

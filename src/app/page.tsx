@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-primary-foreground">
+      <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white">
         {heroImage && (
             <Image
                 src={heroImage.imageUrl}
@@ -33,13 +33,13 @@ export default function Home() {
                 data-ai-hint={heroImage.imageHint}
             />
         )}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative container px-4 md:px-6 z-10">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Your Vision, Engineered.
+              Engineering Your Digital Vision
             </h1>
-            <p className="max-w-[700px] text-lg md:text-xl text-primary-foreground/90">
+            <p className="max-w-[700px] text-lg md:text-xl text-white/90">
               We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -56,26 +56,22 @@ export default function Home() {
 
       <section id="services" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Services</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What We Do</h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                From concept to launch, we provide comprehensive software development services tailored to your unique needs.
-              </p>
-              <div className="pt-4">
-                <Button asChild>
-                  <Link href="/services">View All Services</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="grid gap-6 mt-10 lg:mt-0">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">Our Services</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What We Do</h2>
+            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+              From concept to launch, we provide comprehensive software development services tailored to your unique needs.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredServices.map((service) => {
                 const Icon = serviceIcons[service.title] || Code;
                 return (
-                  <Card key={service.title} className="bg-secondary/50 border border-border/30 hover:bg-secondary hover:border-border/60 transition-all duration-300 group">
+                  <Card key={service.title} className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 group">
                     <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-                      <Icon className="h-8 w-8 text-primary" />
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -84,7 +80,11 @@ export default function Home() {
                   </Card>
                 );
               })}
-            </div>
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild>
+              <Link href="/services">View All Services</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function Home() {
             {featuredPortfolio.map((item) => {
                const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                return (
-                <Card key={item.title} className="overflow-hidden group bg-background/50 border border-border/30 hover:border-border/60 transition-colors">
+                <Card key={item.title} className="overflow-hidden group bg-background shadow-lg hover:shadow-xl transition-all duration-300">
                    {portfolioImage && (
                     <div className="overflow-hidden">
                        <Image
@@ -122,7 +122,7 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground line-clamp-3">{item.description}</p>
                   </CardContent>
                    <CardFooter>
-                     <Button variant="link" asChild className="p-0 h-auto font-semibold">
+                     <Button variant="link" asChild className="p-0 h-auto font-semibold text-primary">
                         <Link href={`/portfolio`}>View Case Study <ArrowRight className="ml-2 h-4 w-4" /></Link>
                      </Button>
                   </CardFooter>
@@ -150,7 +150,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to Start Your Project?</h2>

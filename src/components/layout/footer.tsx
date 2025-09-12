@@ -8,7 +8,7 @@ import { navLinks } from '@/lib/data';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40">
+    <footer className="bg-secondary text-secondary-foreground">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="flex flex-col gap-4 md:col-span-3">
@@ -18,20 +18,20 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Building the Future, One Line of Code at a Time.
             </p>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
               <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="Twitter">
-                  <Twitter className="h-4 w-4" />
+                  <Twitter className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="GitHub">
-                  <Github className="h-4 w-4" />
+                  <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="LinkedIn">
-                  <Linkedin className="h-4 w-4" />
+                  <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
             </div>
@@ -42,7 +42,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {navLinks.slice(1).map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-foreground">
+                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -52,9 +52,9 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="font-semibold tracking-tight">Legal</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Terms of Service</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
 
@@ -64,13 +64,13 @@ export function Footer() {
               Subscribe to our newsletter for the latest insights and news.
             </p>
             <form className="flex w-full max-w-sm items-center space-x-2">
-              <Input type="email" placeholder="Email" />
+              <Input type="email" placeholder="Email" className="bg-background" />
               <Button type="submit">Subscribe</Button>
             </form>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border/40 pt-6 text-center text-sm text-muted-foreground">
+        <div className="mt-8 border-t border-border pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Zechsoft. All rights reserved.</p>
         </div>
       </div>

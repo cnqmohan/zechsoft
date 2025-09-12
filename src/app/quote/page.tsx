@@ -25,7 +25,7 @@ export default function QuotePage() {
              <QuoteTool />
           </div>
           <div className="lg:col-span-2 space-y-8">
-            <Card className='bg-secondary/30'>
+            <Card className='shadow-lg'>
               <CardHeader>
                 <CardTitle>Contact Us</CardTitle>
                 <CardDescription>
@@ -36,7 +36,7 @@ export default function QuotePage() {
                 <ContactForm />
               </CardContent>
             </Card>
-            <Card className='bg-secondary/30'>
+            <Card className='shadow-lg'>
               <CardHeader>
                 <CardTitle>Our Information</CardTitle>
               </CardHeader>

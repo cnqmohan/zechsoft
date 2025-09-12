@@ -28,7 +28,7 @@ export default function BlogPage() {
             {blogPosts.map((post) => {
               const postImage = PlaceHolderImages.find((p) => p.id === post.imageId);
               return (
-                <Card key={post.slug} className="flex flex-col overflow-hidden bg-secondary/50 border-0 hover:bg-secondary transition-colors duration-300">
+                <Card key={post.slug} className="flex flex-col overflow-hidden bg-background shadow-lg hover:shadow-xl transition-shadow duration-300">
                   {postImage && (
                     <Link href={`/blog/${post.slug}`}>
                       <Image
@@ -55,7 +55,7 @@ export default function BlogPage() {
                     <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="link" asChild className="p-0 h-auto">
+                    <Button variant="link" asChild className="p-0 h-auto text-primary">
                       <Link href={`/blog/${post.slug}`}>
                         Read More <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>

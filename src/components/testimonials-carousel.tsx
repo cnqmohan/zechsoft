@@ -20,17 +20,17 @@ export function TestimonialsCarousel() {
         align: 'start',
         loop: true,
       }}
-      className="w-full max-w-4xl mx-auto mt-12"
+      className="w-full max-w-5xl mx-auto mt-12"
     >
       <CarouselContent>
         {testimonials.map((testimonial, index) => {
           const image = PlaceHolderImages.find((p) => p.id === testimonial.imageId);
           return (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1 h-full">
-                <Card className="flex flex-col justify-between h-full bg-secondary/50 border-0">
+              <div className="p-4 h-full">
+                <Card className="flex flex-col justify-between h-full bg-background shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="flex flex-col items-start gap-4 p-6">
-                    <p className="text-muted-foreground">"{testimonial.quote}"</p>
+                    <p className="text-muted-foreground text-lg">"{testimonial.quote}"</p>
                     <div className="flex items-center gap-4 pt-4">
                       {image && (
                          <Avatar>

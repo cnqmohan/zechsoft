@@ -40,7 +40,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   {serviceImage && (
-                    <div className="bg-secondary/30 p-4 rounded-lg">
+                    <div className="p-4 rounded-lg shadow-lg bg-background">
                     <Image
                       src={serviceImage.imageUrl}
                       alt={serviceImage.description}

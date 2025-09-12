@@ -26,12 +26,13 @@ export default function PortfolioPage() {
       <section className="w-full pb-12 md:pb-24 lg:pb-32">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12">
-            {portfolioItems.map((item) => {
+            {portfolioItems.map((item, index) => {
               const itemImage = PlaceHolderImages.find((p) => p.id === item.imageId);
+              const isReversed = index % 2 !== 0;
               return (
-                <Card key={item.title} className="w-full overflow-hidden shadow-lg bg-secondary/30">
-                  <div className="grid md:grid-cols-2">
-                    <div className="relative">
+                <Card key={item.title} className="w-full overflow-hidden shadow-lg bg-background">
+                  <div className={`grid md:grid-cols-2 ${isReversed ? 'md:grid-flow-row-dense' : ''}`}>
+                    <div className={`relative ${isReversed ? 'md:col-start-2' : ''}`}>
                       {itemImage && (
                         <Image
                           src={itemImage.imageUrl}
@@ -43,13 +44,13 @@ export default function PortfolioPage() {
                         />
                       )}
                     </div>
-                    <div className="flex flex-col p-6 md:p-8">
-                      <Badge variant="default" className="w-fit mb-2">{item.category}</Badge>
+                    <div className={`flex flex-col p-6 md:p-8 ${isReversed ? 'md:col-start-1' : ''}`}>
+                      <Badge variant="outline" className="w-fit mb-2 text-primary border-primary">{item.category}</Badge>
                       <h3 className="text-2xl font-bold">{item.title}</h3>
                       <p className="mt-2 text-muted-foreground">{item.description}</p>
                       
                       <div className="mt-6">
-                        <h4 className="font-semibold">Key Metrics:</h4>
+                        <h4 className="font-semibold text-lg">Key Metrics:</h4>
                         <ul className="mt-2 space-y-2">
                           {item.metrics.map(metric => (
                             <li key={metric} className="flex items-center gap-2 text-sm">
@@ -61,7 +62,7 @@ export default function PortfolioPage() {
                       </div>
                       
                       <div className="mt-6">
-                        <h4 className="font-semibold">Challenges Overcome:</h4>
+                        <h4 className="font-semibold text-lg">Challenges Overcome:</h4>
                         <p className="mt-2 text-sm text-muted-foreground">{item.challenges}</p>
                       </div>
                     </div>
