@@ -43,6 +43,24 @@
       "imageHint": "gears support"
     },
     {
+      "id": "service-cloud-devops",
+      "description": "Cloud infrastructure diagram",
+      "imageUrl": "https://picsum.photos/seed/cloud/600/400",
+      "imageHint": "cloud infrastructure"
+    },
+    {
+      "id": "service-data-analytics",
+      "description": "Business intelligence dashboard with charts and graphs",
+      "imageUrl": "https://picsum.photos/seed/analytics/600/400",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "service-cybersecurity",
+      "description": "Digital lock and shield representing cybersecurity",
+      "imageUrl": "https://picsum.photos/seed/cyber/600/400",
+      "imageHint": "cyber security"
+    },
+    {
       "id": "portfolio-1",
       "description": "Dashboard of a financial analytics platform",
       "imageUrl": "https://picsum.photos/seed/p1/600/400",

@@ -33,6 +33,24 @@ export const services = [
     imageId: 'service-ui-ux',
   },
   {
+    title: 'Cloud & DevOps',
+    shortDescription: 'Streamlining development and operations for faster delivery and better performance.',
+    description: 'We help you leverage the power of the cloud with our DevOps services. We automate your infrastructure, streamline your CI/CD pipeline, and ensure your applications are scalable, reliable, and secure. Our expertise covers major cloud platforms like AWS, Azure, and Google Cloud.',
+    imageId: 'service-cloud-devops',
+  },
+  {
+    title: 'Data Analytics & BI',
+    shortDescription: 'Turning your data into actionable insights with business intelligence and analytics.',
+    description: 'Unlock the potential of your data. We provide end-to-end data analytics and business intelligence services, from data warehousing and ETL to building interactive dashboards and predictive models. We help you make data-driven decisions that foster growth and efficiency.',
+    imageId: 'service-data-analytics',
+  },
+  {
+    title: 'Cybersecurity Consulting',
+    shortDescription: 'Protecting your digital assets with comprehensive cybersecurity strategies and solutions.',
+    description: 'In a world of evolving threats, we provide robust cybersecurity services to protect your business. Our offerings include vulnerability assessments, penetration testing, security audits, and implementing proactive security measures to safeguard your applications and infrastructure from cyber attacks.',
+    imageId: 'service-cybersecurity',
+  },
+  {
     title: 'Product Maintenance & Support',
     shortDescription: 'Ensuring your software remains up-to-date, secure, and running smoothly.',
     description: 'Our commitment doesn’t end at launch. We provide ongoing maintenance and support services to ensure your application remains secure, performant, and compatible with the latest technologies. We handle updates, bug fixes, and performance monitoring so you can focus on your business.',

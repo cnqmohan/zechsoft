@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck } from 'lucide-react';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 import { services, portfolioItems } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -13,6 +13,9 @@ const serviceIcons: { [key: string]: React.ElementType } = {
   'Enterprise Solutions': Users,
   'UI/UX Design': BrainCircuit,
   'Product Maintenance & Support': CheckCircle,
+  'Cloud & DevOps': CloudCog,
+  'Data Analytics & BI': AreaChart,
+  'Cybersecurity Consulting': ShieldCheck,
 };
 
 export default function Home() {
