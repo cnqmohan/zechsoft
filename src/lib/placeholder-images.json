@@ -16,7 +16,7 @@
       "id": "service-web-dev",
       "description": "Laptop with code on screen",
       "imageUrl": "https://picsum.photos/seed/webdev/600/400",
-      "imageHint": "web development"
+      "imageHint": "coding setup"
     },
     {
       "id": "service-mobile-dev",
@@ -28,7 +28,7 @@
       "id": "service-enterprise",
       "description": "Server room with glowing lights",
       "imageUrl": "https://picsum.photos/seed/enterprise/600/400",
-      "imageHint": "data center"
+      "imageHint": "server datacenter"
     },
     {
       "id": "service-ui-ux",

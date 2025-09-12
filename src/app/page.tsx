@@ -58,7 +58,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">Our Services</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What We Do</h2>
+            <Link href="/services" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl hover:text-primary transition-colors">What We Do</Link>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
               From concept to launch, we provide comprehensive software development services tailored to your unique needs.
             </p>

@@ -11,19 +11,19 @@ export const services = [
   {
     title: 'Custom Web Development',
     shortDescription: 'Building robust, scalable, and secure web applications tailored to your business needs.',
-    description: 'We specialize in creating high-performance web applications using modern technologies. From complex enterprise platforms to dynamic single-page applications, we provide end-to-end development services, ensuring a seamless user experience and optimal performance.',
+    description: 'We specialize in creating high-performance web applications using modern technologies like React, Next.js, and Node.js. From complex enterprise platforms to dynamic single-page applications, we provide end-to-end development services, ensuring a seamless user experience and optimal performance across all devices. Our process includes thorough planning, agile development, and rigorous testing to deliver solutions that are not only powerful but also reliable and maintainable.',
     imageId: 'service-web-dev',
   },
   {
     title: 'Mobile App Development',
     shortDescription: 'Crafting intuitive and high-performance native and cross-platform mobile applications.',
-    description: 'Our team develops mobile apps for iOS and Android that are not only visually stunning but also highly functional. We focus on user engagement, performance, and scalability to deliver apps that your users will love.',
+    description: 'Our team develops mobile apps for iOS and Android that are not only visually stunning but also highly functional. We focus on user engagement, performance, and scalability to deliver apps that your users will love. We use technologies like React Native and native SDKs to build apps that are fast, responsive, and provide a great user experience.',
     imageId: 'service-mobile-dev',
   },
   {
     title: 'Enterprise Solutions',
     shortDescription: 'Developing large-scale software solutions to streamline your business operations.',
-    description: 'We build custom enterprise software, including ERPs, CRMs, and other business management tools. Our solutions are designed to improve efficiency, automate workflows, and provide valuable data insights for large organizations.',
+    description: 'We build custom enterprise software, including ERPs, CRMs, and other business management tools. Our solutions are designed to improve efficiency, automate workflows, and provide valuable data insights for large organizations. We focus on creating scalable and secure architectures that can grow with your business.',
     imageId: 'service-enterprise',
   },
   {
