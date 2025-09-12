@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck, Target, Lightbulb, Heart, Book, UserCheck } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Users, CheckCircle, BrainCircuit, CloudCog, AreaChart, ShieldCheck, Target, Lightbulb, Heart, Book, UserCheck, Star, Trophy } from 'lucide-react';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 import { services, portfolioItems, coreValues } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -183,6 +183,32 @@ export default function Home() {
         </section>
       </ScrollFadeIn>
       <ScrollFadeIn>
+        <section id="goal-mission" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:gap-8">
+              <Card className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <CardContent className="p-6 flex flex-col items-center gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Star className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Our Goal</h3>
+                  <p className="text-muted-foreground text-sm">We won't rest till we satisfy our client to their fullest.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                <CardContent className="p-6 flex flex-col items-center gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Trophy className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Our Mission</h3>
+                  <p className="text-muted-foreground text-sm">We won't rest till we satisfy our client to their fullest.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </ScrollFadeIn>
+      <ScrollFadeIn>
         <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
@@ -270,4 +296,5 @@ export default function Home() {
     
 
     
+
 

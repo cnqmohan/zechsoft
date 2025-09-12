@@ -17,7 +17,7 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="text-sm text-muted-foreground">
-              Building the Future, One Line of Code at a Time.
+              Empowering Your Growth, Building Your Digital Strength.
             </p>
             <div className="flex items-center space-x-1">
               <Button variant="ghost" size="icon" asChild>
