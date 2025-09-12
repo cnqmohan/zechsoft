@@ -223,28 +223,10 @@ export const services: ServiceCategory[] = [
 
 export const teamMembers = [
   {
-    name: 'Alex Johnson',
+    name: 'Dhinesh Ram',
     role: 'Founder & CEO',
-    bio: 'With over 20 years in the tech industry, Alex drives the company\'s vision and strategy, ensuring we stay at the forefront of innovation.',
+    bio: 'Dhinesh has led the company from its inception, guiding it through two years of rapid growth with a focus on innovation and client success.',
     imageId: 'team-1',
-  },
-  {
-    name: 'Maria Garcia',
-    role: 'Chief Technology Officer',
-    bio: 'Maria leads our engineering team with a passion for cutting-edge technology and a commitment to technical excellence.',
-    imageId: 'team-2',
-  },
-  {
-    name: 'Sam Chen',
-    role: 'Head of Design',
-    bio: 'Sam is the creative force behind our user-centric design philosophy, transforming complex problems into elegant solutions.',
-    imageId: 'team-3',
-  },
-  {
-    name: 'David Lee',
-    role: 'Director of Project Management',
-    bio: 'David ensures that every project is delivered on time and on budget, fostering clear communication and seamless collaboration.',
-    imageId: 'team-4',
   },
 ];
 
