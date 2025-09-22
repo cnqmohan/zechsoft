@@ -14,7 +14,7 @@ import { ScrollFadeIn } from '@/components/scroll-fade-in';
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
   const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-us');
-  const featuredServices = services.flatMap(s => s.items).slice(0, 3);
+  const featuredServices = services.flatMap(s => s.items).slice(0, 9);
   const recentWork = portfolioItems.slice(0, 6);
 
   const serviceIcons: { [key: string]: React.ElementType } = {
@@ -37,6 +37,16 @@ export default function Home() {
   };
 
   const whyChooseUsItems = [
+     {
+      icon: Star,
+      title: 'Our Goal',
+      description: 'Empowering Your Growth, Building Your Digital Strength.',
+    },
+    {
+      icon: Trophy,
+      title: 'Our Mission',
+      description: "We won't rest till we satisfy our client to their fullest.",
+    },
     {
       icon: Award,
       title: 'Proven Expertise',
@@ -71,36 +81,32 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-            <div className="flex flex-col justify-center space-y-4">
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-                Engineering Your Digital Vision
-              </h1>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg">
-                  <Link href="/contact">Get a Quote</Link>
-                </Button>
-                <Button asChild size="lg" variant="secondary">
-                  <Link href="/services">Our Services</Link>
-                </Button>
-              </div>
+      <section className="relative w-full py-20 md:py-32 lg:py-40 text-center text-white">
+        {heroImage && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage.imageUrl})` }}
+            data-ai-hint={heroImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              Engineering Your Digital Vision
+            </h1>
+            <p className="max-w-[700px] text-lg md:text-xl">
+              We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg">
+                <Link href="/contact">Get a Quote</Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/services">Our Services</Link>
+              </Button>
             </div>
-            {heroImage && (
-                <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    width={1200}
-                    height={800}
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-                    priority
-                    data-ai-hint={heroImage.imageHint}
-                />
-            )}
           </div>
         </div>
       </section>
@@ -217,35 +223,9 @@ export default function Home() {
           </div>
         </section>
       </ScrollFadeIn>
+      
       <ScrollFadeIn>
-        <section id="goal-mission" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-          <div className="container px-4 md:px-6">
-            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:gap-8">
-              <Card className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                <CardContent className="p-6 flex flex-col items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Star className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold">Our Goal</h3>
-                  <p className="text-muted-foreground text-sm">We won't rest till we satisfy our client to their fullest.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                <CardContent className="p-6 flex flex-col items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Trophy className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold">Our Mission</h3>
-                  <p className="text-muted-foreground text-sm">We won't rest till we satisfy our client to their fullest.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <ScrollFadeIn>
-        <section id="why-choose-us" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="why-choose-us" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose Zechsoft?</h2>
@@ -253,11 +233,11 @@ export default function Home() {
                 We are more than just a software company. We are your trusted partner in digital innovation.
               </p>
             </div>
-            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {whyChooseUsItems.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <Card key={item.title} className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                  <Card key={item.title} className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
                     <CardContent className="p-6 flex flex-col items-center gap-4">
                       <div className="bg-primary/10 p-3 rounded-full">
                         <Icon className="w-8 h-8 text-primary" />
@@ -274,7 +254,7 @@ export default function Home() {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Recent Work</h2>
@@ -361,6 +341,7 @@ export default function Home() {
     
 
     
+
 
 
 
