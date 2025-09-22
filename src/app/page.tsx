@@ -85,7 +85,7 @@ export default function Home() {
         {heroImage && (
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center bg-fixed"
             style={{ backgroundImage: `url(${heroImage.imageUrl})` }}
             data-ai-hint={heroImage.imageHint}
           />
@@ -341,6 +341,7 @@ export default function Home() {
     
 
     
+
 
 
 
