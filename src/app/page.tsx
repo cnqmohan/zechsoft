@@ -161,7 +161,7 @@ export default function Home() {
                     const Icon = serviceIcons[service.title] || Code;
                     return (
                       <Link key={service.title} href={`/services#${service.slug}`} className="group">
-                      <Card className="bg-background shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
+                      <Card className="bg-secondary shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col overflow-hidden">
                         {serviceImage && (
                             <div className="overflow-hidden">
                                 <Image
@@ -238,7 +238,7 @@ export default function Home() {
                 {whyChooseUsItems.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <Card key={item.title} className="bg-secondary shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                    <Card key={item.title} className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
                       <CardContent className="p-6 flex flex-col items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-full">
                           <Icon className="w-8 h-8 text-primary" />
@@ -267,7 +267,7 @@ export default function Home() {
                 {recentWork.map((item) => {
                    const portfolioImage = PlaceHolderImages.find(p => p.id === item.imageId);
                    return (
-                    <Card key={item.title} className="overflow-hidden group bg-background shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Card key={item.title} className="overflow-hidden group bg-secondary shadow-lg hover:shadow-xl transition-all duration-300">
                        {portfolioImage && (
                         <div className="overflow-hidden">
                            <Image
@@ -343,6 +343,7 @@ export default function Home() {
     
 
     
+
 
 
 
