@@ -94,7 +94,7 @@ export default function Home() {
         <section className="w-full py-20 md:py-32 lg:py-40 text-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4">
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
                 Engineering Your Digital Vision
               </h1>
               <p className="max-w-[700px] text-lg md:text-xl text-foreground/80">
@@ -343,6 +343,7 @@ export default function Home() {
     
 
     
+
 
 
 
