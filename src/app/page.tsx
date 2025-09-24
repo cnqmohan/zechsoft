@@ -97,7 +97,7 @@ export default function Home() {
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
                 Engineering Your Digital Vision
               </h1>
-              <p className="max-w-[700px] text-lg md:text-xl text-foreground/80">
+              <p className="max-w-[700px] text-lg md:text-xl text-white">
                 We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -343,6 +343,7 @@ export default function Home() {
     
 
     
+
 
 
 
