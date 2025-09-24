@@ -89,15 +89,15 @@ export default function Home() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-black/60" />
+      
       <div className="relative">
-        <section className="w-full py-20 md:py-32 lg:py-40 text-center text-white">
+        <section className="w-full py-20 md:py-32 lg:py-40 text-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 Engineering Your Digital Vision
               </h1>
-              <p className="max-w-[700px] text-lg md:text-xl">
+              <p className="max-w-[700px] text-lg md:text-xl text-foreground/80">
                 We deliver high-quality, custom software solutions that drive growth and efficiency for businesses worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -113,7 +113,7 @@ export default function Home() {
         </section>
 
         <ScrollFadeIn>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/90">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/95">
             <div className="container px-4 md:px-6">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-4">
@@ -146,7 +146,7 @@ export default function Home() {
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background/90">
+          <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background/95">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">Our Services</div>
@@ -197,7 +197,7 @@ export default function Home() {
           </section>
         </ScrollFadeIn>
         <ScrollFadeIn>
-          <section id="values" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/90">
+          <section id="values" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/95">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Core Values</h2>
@@ -226,7 +226,7 @@ export default function Home() {
         </ScrollFadeIn>
         
         <ScrollFadeIn>
-          <section id="why-choose-us" className="w-full py-12 md:py-24 lg:py-32 bg-background/90">
+          <section id="why-choose-us" className="w-full py-12 md:py-24 lg:py-32 bg-background/95">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose Zechsoft?</h2>
@@ -255,7 +255,7 @@ export default function Home() {
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/90">
+          <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/95">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Recent Work</h2>
@@ -306,7 +306,7 @@ export default function Home() {
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background/90">
+          <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background/95">
             <div className="container px-4 md:px-6">
                <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
@@ -320,7 +320,7 @@ export default function Home() {
         </ScrollFadeIn>
         
         <ScrollFadeIn>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/90">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary/95">
             <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
               <div className="space-y-3">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to Start Your Project?</h2>
@@ -343,6 +343,7 @@ export default function Home() {
     
 
     
+
 
 
 
