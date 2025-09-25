@@ -238,13 +238,13 @@ export default function Home() {
                 {whyChooseUsItems.map((item) => {
                   const Icon = item.icon;
                   return (
-                    <Card key={item.title} className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+                    <Card key={item.title} className="group bg-background shadow-md hover:shadow-lg hover:bg-primary transition-all duration-300 text-center">
                       <CardContent className="p-6 flex flex-col items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                          <Icon className="w-8 h-8 text-primary" />
+                        <div className="bg-primary/10 p-3 rounded-full transition-colors duration-300 group-hover:bg-primary-foreground/20">
+                          <Icon className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
                         </div>
-                        <h3 className="text-xl font-bold">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm">{item.description}</p>
+                        <h3 className="text-xl font-bold transition-colors duration-300 group-hover:text-primary-foreground">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm transition-colors duration-300 group-hover:text-primary-foreground/80">{item.description}</p>
                       </CardContent>
                     </Card>
                   );
@@ -354,3 +354,6 @@ export default function Home() {
 
 
 
+
+
+    
