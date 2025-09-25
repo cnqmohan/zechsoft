@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef, useEffect, useState, ReactNode } from 'react';
@@ -15,11 +16,8 @@ export function ScrollFadeIn({ children, className }: ScrollFadeInProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          // Optional: stop observing after it's visible
-          observer.unobserve(entry.target);
-        }
+        // Toggle visibility based on whether the element is intersecting
+        setVisible(entry.isIntersecting);
       });
     }, { threshold: 0.1 });
 
